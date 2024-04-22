@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="theme1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/digital" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Zydric's Calculator</title>
+  </head>
+  <body>
+      <main class="calculator">
+        <section class="calc-header">
+          <div class="logo-tooltip">
+            <span class="logo">CASIO</span>
+            <div class="creator-tooltip">
+              <div class="icon">i</div>
+              <div class="creator-tooltiptext">Made by Zydric Abel :D</div>
+            </div>
+          </div>
+      
+          <div class="theme-toggle">
+            <div class="theme-number">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+
+            <div class="theme-container">
+              <span>theme</span>
+              <div class="theme-options">
+                <button class="theme-btn" role="button"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="display">
+          <input type="text" readonly value="" class="result" />
+          <div class="font-size">
+            <!-- Tooltip for font-size buttons -->
+            <button class="increase-btn font-btn tooltip">
+              <span class="material-symbols-outlined">arrow_upward</span>
+              <span class="tooltiptext">Increase font size</span>
+            </button>
+
+            <button class="decrease-btn font-btn tooltip">
+              <span class="material-symbols-outlined">arrow_downward</span>
+              <span class="tooltiptext">Decrease font size</span>
+            </button>
+
+          </div>
+        </section>
+        <section class="keypad-container">
+          <button class="num-btn" onclick="appendToDisplay('7')">7</button>
+          <button class="num-btn" onclick="appendToDisplay('8')">8</button>
+          <button class="num-btn" onclick="appendToDisplay('9')">9</button>
+          <button class="delete-btn" onclick="del()">DEL</button>
+
+          <button class="num-btn" onclick="appendToDisplay('4')">4</button>
+          <button class="num-btn" onclick="appendToDisplay('5')">5</button>
+          <button class="num-btn" onclick="appendToDisplay('6')">6</button>
+          <button class="operator-btn" onclick="appendToDisplay('+')">+</button>
+
+          <button class="num-btn" onclick="appendToDisplay('1')">1</button>
+          <button class="num-btn" onclick="appendToDisplay('2')">2</button>
+          <button class="num-btn" onclick="appendToDisplay('3')">3</button>
+          <button class="operator-btn" onclick="appendToDisplay('-')">-</button>
+
+          <button class="num-btn" onclick="appendToDisplay('.')">.</button>
+          <button class="num-btn" onclick="appendToDisplay('0')">0</button>
+          <button class="operator-btn" onclick="appendToDisplay('/')">/</button>
+          <button class="operator-btn" onclick="appendToDisplay('*')">*</button>
+
+          <button class="reset-btn" onclick="reset()">RESET</button>
+          <button class="equal-btn" onclick="calculate()">=</button>
+        </section>
+      </main>
+
+      <!-- JAVSCRIPT -->
+      <script src="script1.js"></script>
+  </body>
+  <!-- ABEL, Zydric Q. G1 BSIT-1 CS201 - WebDev -->
+</html>
